@@ -1,0 +1,75 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-upload {
+  padding: 5px;
+  margin: 10px 0;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.file-upload .image-preview {
+  min-height: 140px;
+  height: 140px;
+  border: 2px solid rgba(112, 112, 112, 0.5);
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.file-upload .image-preview img {
+  max-height: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table thead tr .th-id {
+  min-width: 40px;
+}
+
+table thead tr .th-name {
+  min-width: 200px;
+}
+
+table thead tr .th-type {
+  min-width: 200px;
+}
+
+table thead th {
+  background-color: #308470;
+  color: #fff;
+  letter-spacing: 1.2px;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+table tbody tr {
+  border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+}
+
+table tbody tr td {
+  letter-spacing: 1.2px;
+  padding: 5px 10px;
+  text-align: left;
+  height: 40px;
+}
+
+table tbody tr .file-type {
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+}

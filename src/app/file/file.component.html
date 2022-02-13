@@ -1,0 +1,73 @@
+<div class="container">
+  <input
+    type="file"
+    accept="image/*"
+    class="file-input"
+    (change)="onFileSelected($event)"
+    #fileUpload
+  >
+  <div class="file-upload">
+    <div>
+      <p>{{ fileName || "No file uploaded yet." }}</p>
+      <div class="image-preview">
+        <img [src]="filePath">
+      </div>
+    </div>
+
+
+    <button
+      type="button"
+      mat-mini-fab
+      color="primary"
+      aria-label="Example icon button with a bookmark icon"
+      (click)="fileUpload.click()"
+    >
+      <mat-icon>attach_file</mat-icon>
+    </button>
+  </div>
+
+
+  <button
+    type="button"
+    (click)="upload()"
+    [disabled]="targetFile.type === ''"
+  >post</button>
+
+  <button
+    type="button"
+    (click)="onGetFilesClick()"
+  >get</button>
+
+  <button
+    type="button"
+    (click)="onDeleteFileClick(deleteId.value)"
+  >delete</button>
+
+  <input
+    type="text"
+    #deleteId
+    (keyup.enter)="onDeleteFileClick(deleteId.value)"
+  >
+  <table class="mt-1">
+    <thead>
+      <tr>
+        <th class="th-id">id</th>
+        <th class="th-name">name</th>
+        <th class="th-type">type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of dataList">
+        <td >
+          {{item.id }}
+        </td>
+        <td class="overflow-ellipsis">
+          {{item.name }}
+        </td>
+        <td class="file-type overflow-ellipsis">
+          {{item.type }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
