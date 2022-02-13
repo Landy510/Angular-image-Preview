@@ -1,2 +1,4 @@
 # 2022.02.10 develop record
-1. 當 post 完成後，會不知道為什麼整個頁面被 reload ? 
+# Learning Objectives
+1. 完成圖片預覽的功能
+2. 將要上傳的圖片存入 json-server 中，並呈現出來
